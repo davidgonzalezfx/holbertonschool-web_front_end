@@ -180,4 +180,4 @@ What you should learn from this project:
 ---
 
 ## Author
-* **Felipe Layos** - [layosdev](https://github.com/layosdev)
+* **David Gonzalez** - [davidgonzalezfx](https://github.com/davidgonzalezfx)
