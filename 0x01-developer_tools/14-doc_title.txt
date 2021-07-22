@@ -1,1 +1,0 @@
-Holberton School - Developer tools
