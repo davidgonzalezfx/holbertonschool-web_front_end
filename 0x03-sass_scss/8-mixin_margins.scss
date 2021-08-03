@@ -1,0 +1,13 @@
+/* Margin mixin */
+@mixin horizontal-margin($property) {
+  margin-left: $property;
+  margin-right: $property;
+}
+
+body {
+  @include horizontal-margin(10px);
+}
+
+div {
+  @include horizontal-margin(15px);
+}

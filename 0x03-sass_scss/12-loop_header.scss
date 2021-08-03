@@ -1,0 +1,6 @@
+/* Loop headers */
+@for $val from 1 through 5 {
+  h#{$val} {
+    font-size: $val + px;
+  }
+}

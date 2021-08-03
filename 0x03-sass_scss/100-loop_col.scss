@@ -1,0 +1,6 @@
+/* Columns and operatos */
+@for $item from 1 to 4 {
+  .col-#{$item} {
+    width: 100% / $item;
+  }
+}
