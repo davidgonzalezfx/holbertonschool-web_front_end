@@ -1,0 +1,77 @@
+:root {
+  --light-red: #e0003c;
+  --dark-red: #bc1340;
+  --text-gray: #8c8c8c;
+  --text-white: white;
+}
+
+/* Navigation Bottom Border */
+
+.border-bottom {
+  border-color: var(--light-red) !important;
+}
+
+.btn-primary {
+  background-color: var(--light-red);
+  border-color: var(--light-red);
+}
+
+/* Buttons Overwrite  */
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: var(--dark-red) !important;
+  border-color: var(--dark-red) !important;
+}
+
+.btn-outline-primary {
+  color: var(--light-red) !important;
+  border-color: var(--light-red) !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+  background-color: initial !important;
+}
+
+.btn-primary.focus,
+.btn-primary:focus {
+  box-shadow: var(--dark-red) !important;
+}
+
+.btn.focus,
+.btn:focus {
+  box-shadow: var(--dark-red) !important;
+}
+
+/* Links Overwrite */
+
+a,
+a:hover,
+a:focus {
+  color: var(--light-red) !important;
+}
+
+/* Text Overwrite */
+
+.text-muted {
+  color: var(--text-gray) !important;
+}
+
+/* Cards Overwrite */
+
+.card,
+.card-header,
+.card-footer {
+  border-color: var(--light-red) !important;
+  border-radius: 1em;
+}
+
+.card-header {
+  background-color: var(--light-red);
+  color: var(--text-white);
+  border-top-right-radius: 1rem !important;
+  border-top-left-radius: 1rem !important;
+}
