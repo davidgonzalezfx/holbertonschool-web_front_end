@@ -1,0 +1,74 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Don Quijote de la Manca",
+      "author": "Miguel de Cervantes"
+    },
+    {
+      "title": "Libro de Job",
+      "author": "Anónimo",
+      "id": 2
+    },
+    {
+      "title": "Poema de Gilgamesh",
+      "author": "Anónimo",
+      "id": 3
+    },
+    {
+      "title": "Todo se desmorona",
+      "author": "Chinua Achebe",
+      "id": 4
+    },
+    {
+      "title": "Cuentos infantiles",
+      "author": "Hans Christian Andersen",
+      "id": 5
+    },
+    {
+      "title": "Divina Comedia",
+      "author": "Dante Alighieri",
+      "id": 6
+    },
+    {
+      "title": "Orgullo y prejuicio",
+      "author": "Papá Goriot",
+      "id": 7
+    },
+    {
+      "title": "Decamerón",
+      "author": "Giovanni Boccaccio",
+      "id": 8
+    },
+    {
+      "title": "Ficciones",
+      "author": "Jorge Luis Borges",
+      "id": 9
+    },
+    {
+      "title": "Cumbres Borrascosas",
+      "author": "Emily Brontë",
+      "id": 10
+    },
+    {
+      "author": "Eurípides",
+      "title": "Medea",
+      "id": 11
+    },
+    {
+      "author": "William Faulkner",
+      "title": "El ruido y la furia",
+      "id": 12
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

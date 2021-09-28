@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Task 7</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type="application/javascript">
+        $(document).ready(() => {
+            function createSearchForm() {
+                $('body').append(
+                    $('<input type="text">'),
+                    $('<input type="submit">').click(() => {
+                        queryWikipedia($('input:nth-of-type(1)').val())
+                    }),
+                    $('<ul></ul>'),
+                    $('<ul id="pagination"></ul>')
+                )
+            }
+
+            function addNewArticle(id, title, snippet) {
+                $li = $(`
+                    <li>
+                        <p><span>${id} - <b>${title}</b></span></p>
+                        <p>${snippet}</p>
+                    </li>
+                    `);
+
+                $("ul").append($li);
+            }
+
+            function queryWikipedia(search, offset = 0) {
+                $.ajax({
+                    url: "https://en.wikipedia.org/w/api.php?origin=*",
+                    data: {
+                        action: "query",
+                        format: "json",
+                        list: "search",
+                        srsearch: search,
+                        sroffset: offset * 10,
+                        srlimit: itemsPerPage = 10,
+                    },
+                    success: (response) => {
+                        for (let data of response.query.search) {
+                            addNewArticle(data.pageid, data.title, data.snippet);
+                        }
+                        buildPagination(response.query.searchinfo.totalhits, itemsPerPage, offset);
+                    }
+                });
+            }
+            function buildPagination(numberOfItems, itemsPerPage, currentOffset) {
+                $("#pagination").empty();
+
+                let limit = Math.floor(numberOfItems / itemsPerPage);
+                for (let pageIndex = 1; pageIndex <= limit; pageIndex++) {
+                    $('#pagination').append(
+                        $(`<li>${pageIndex}</li>`).css({
+                            "cursor": "pointer",
+                            "margin-left": "10px",
+                            "display": "inline",
+
+                        }).click(() => {
+                            queryWikipedia($("input").val(), pageIndex - 1);
+                        })
+                    )
+                }
+            }
+            createSearchForm()
+        });
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
